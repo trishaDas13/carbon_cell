@@ -33,12 +33,11 @@ aside {
       border-radius: 14px;
       text-decoration: none;
       color: white;
-      &:hover {
-        background-color: rgba(40, 219, 40, 0.541);
-      }
+      transition: 1s ease-in-out;
     }
     .active{
         background-color: rgba(40, 219, 40, 0.541);
+        transition: 1s ease-in-out;
     }
   }
   @media (max-width: 800px){

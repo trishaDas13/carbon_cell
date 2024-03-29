@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Header from '../../components/header/Header';
 
 const Population = () => {
   return (
-    <div>Population</div>
+    <main>
+      <Header/>
+    </main>
   )
 }
 

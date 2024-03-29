@@ -1,23 +1,4 @@
-main{
-    width: 100%;
-    header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        padding: 2rem 1rem;
-        .heading{
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            .fa-bars{
-                font-size: 22px;
-                cursor: pointer;
-                display: none;
-                @media (max-width: 800px){
-                    display: inline;
-                }
-            }
-        }
-    }
+main {
+  width: 100%;
+  
 }
