@@ -45,7 +45,7 @@ const Header = () => {
           </p>
         </div>
       </div>
-      <Link to="/wallet">Connect Wallet</Link>
+      <Link to="/wallet">Go To Wallet</Link>
     </header>
   );
 };

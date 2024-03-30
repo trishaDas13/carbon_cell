@@ -69,6 +69,8 @@ header {
     padding: 0.5rem 1rem;
     font-weight: 600;
     border-radius: 5px;
+    min-width: 120px;
+    text-align: center;
     cursor: pointer;
     animation: glow 1.5s infinite alternate;
     @keyframes glow {
