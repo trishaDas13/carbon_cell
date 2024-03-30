@@ -8,8 +8,13 @@ aside {
   padding: 1rem;
   position: sticky;
   top: 0;
-  left: -100%;
-  transition: all 1s;
+  left: 0;
+  @media (max-width: 1023px){
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
   .above{
     display: flex;
     align-items: center;
@@ -43,10 +48,6 @@ aside {
       text-decoration: none;
       color: white;
       transition: 1s ease-in-out;
-    }
-    .active{
-        background-color: rgba(40, 219, 40, 0.541);
-        transition: 1s ease-in-out;
     }
   }
 }

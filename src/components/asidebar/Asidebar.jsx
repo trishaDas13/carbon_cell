@@ -6,7 +6,6 @@ import {useShow} from '../../contextAPI/Context'
 const Asidebar = () => {
   const {isShow, setIsShow} = useShow();
 
-  
   return (
     <>
     {
@@ -20,6 +19,7 @@ const Asidebar = () => {
           to="/"
           className={`list_item ${({ isActive }) =>
             isActive ? "active" : ""}`}
+            onClick={() => setIsShow(false)}
         >
           <i className="fa-solid fa-house"></i>
           <span>Home</span>
@@ -28,6 +28,7 @@ const Asidebar = () => {
           to="/population"
           className={`list_item ${({ isActive }) =>
             isActive ? "active" : ""}`}
+            onClick={() => setIsShow(false)}
         >
           <i className="fa-solid fa-users"></i>
           <span>Population</span>
@@ -36,6 +37,7 @@ const Asidebar = () => {
           to="/currency"
           className={`list_item ${({ isActive }) =>
             isActive ? "active" : ""}`}
+            onClick={() => setIsShow(false)}
         >
           <i className="fa-solid fa-bitcoin-sign"></i>
           <span>Currency</span>
@@ -44,6 +46,7 @@ const Asidebar = () => {
           to="/wallet"
           className={`list_item ${({ isActive }) =>
             isActive ? "active" : ""}`}
+            onClick={() => setIsShow(false)}
         >
           <i className="fa-solid fa-wallet"></i>
           <span>Wallet</span>
