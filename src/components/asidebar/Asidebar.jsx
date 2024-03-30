@@ -1,12 +1,19 @@
 import React,{useState} from "react";
 import "./aside.scss";
 import { NavLink } from "react-router-dom";
+import {useShow} from '../../contextAPI/Context'
 
 const Asidebar = () => {
+  const {isShow, setIsShow} = useShow();
+
+  
   return (
-    <aside>
+    <>
+    {
+      isShow && <aside>
       <div className="above">
         <h1>Carbon Cell</h1>
+        <i class="fa-regular fa-circle-xmark" onClick={() => setIsShow(false)}></i>
       </div>
       <div className="lists">
         <NavLink
@@ -43,6 +50,9 @@ const Asidebar = () => {
         </NavLink>
       </div>
     </aside>
+    }
+    </>
+    
   );
 };
 

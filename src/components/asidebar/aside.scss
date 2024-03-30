@@ -13,10 +13,15 @@ aside {
     display: flex;
     align-items: center;
     gap: 55px;
-    h1{
+    h1, i{
         background: linear-gradient(to right, #D0D92E, #89E791); 
         -webkit-text-fill-color: transparent; 
         -webkit-background-clip: text; 
+    }
+    i{
+      font-size: 25px;
+      cursor: pointer;
+      border-radius: 50%;
     }
   }
   .lists {
@@ -43,8 +48,6 @@ aside {
         transition: 1s ease-in-out;
     }
   }
-  @media (max-width: 800px){
-    display: none;
-  }
+ 
 
 }

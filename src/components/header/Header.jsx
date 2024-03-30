@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./header.scss";
 import { Link } from "react-router-dom";
+import {useShow} from '../../contextAPI/Context'
 
 const Header = () => {
   const [name, setName] = useState(() => localStorage.getItem("name") || "");
-
+  const {isShow, setIsShow} = useShow();
+  
   //todo: save the name in local storage
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
@@ -26,7 +28,9 @@ const Header = () => {
   return (
     <header>
       <div className="heading">
-        <i className="fa-solid fa-bars"></i>
+      {isShow ? null : (
+          <i className="fa-solid fa-bars" onClick={() => setIsShow(true)}></i>
+        )}
         <div className="intro">
           <p className="first">
             Hello,{" "}

@@ -10,13 +10,16 @@ header {
     align-items: center;
     gap: 50px;
     .fa-bars {
-      font-size: 22px;
+      font-size: 28px;
       cursor: pointer;
       margin-left: 1.5rem;
-      display: none;
-      @media (max-width: 800px) {
-        display: inline;
-      }
+      background: linear-gradient(to right, #D0D92E, #89E791); 
+      -webkit-text-fill-color: transparent; 
+      -webkit-background-clip: text; 
+      // display: none;
+      // @media (max-width: 900px){
+      //   display: inline;
+      // }
     }
     .intro {
       .first {
