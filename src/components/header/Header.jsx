@@ -41,7 +41,7 @@ const Header = () => {
             )}
           </p>
           <p className="second">
-            Welcome to, <span>carbon Cell !</span>
+            Welcome to, <span>Carbon Cell !</span>
           </p>
         </div>
       </div>
