@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./header.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation  } from "react-router-dom";
 import {useShow} from '../../contextAPI/Context'
 
 const Header = () => {
   const [name, setName] = useState(() => localStorage.getItem("name") || "");
   const {isShow, setIsShow} = useShow();
+  const location = useLocation();
   
   //todo: save the name in local storage
   const handleKeyDown = (e) => {
@@ -49,7 +50,9 @@ const Header = () => {
           </p>
         </div>
       </div>
-      <Link to="/wallet">Go To Wallet</Link>
+      {location.pathname !== "/wallet" && (
+        <Link to="/wallet">Go To Wallet</Link>
+      )}
     </header>
   );
 };

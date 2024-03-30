@@ -8,7 +8,8 @@ aside {
   padding: 1rem;
   position: sticky;
   top: 0;
-  left: 0;
+  left: -100%;
+  transition: all 1s;
   .above{
     display: flex;
     align-items: center;
@@ -48,6 +49,4 @@ aside {
         transition: 1s ease-in-out;
     }
   }
- 
-
 }

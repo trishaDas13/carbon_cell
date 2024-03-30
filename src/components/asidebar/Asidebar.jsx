@@ -10,7 +10,7 @@ const Asidebar = () => {
   return (
     <>
     {
-      isShow && <aside>
+      isShow && <aside classname={isShow ? `bar_active` : ``}>
       <div className="above">
         <h1>Carbon Cell</h1>
         <i class="fa-regular fa-circle-xmark" onClick={() => setIsShow(false)}></i>
