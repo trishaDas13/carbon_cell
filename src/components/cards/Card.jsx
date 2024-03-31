@@ -35,10 +35,7 @@ const Card = () => {
     <section className="bitcoin">
       <div className="header">
         <h1>{data?.chartName}</h1>
-        <p>disclaimer: {data?.disclaimer}</p>
-      </div>
-      <div className="timing">
-       {data?.time?.updated}
+        <p>Disclaimer: {data?.disclaimer}</p>
       </div>
       <div className="cardsect">
       {data?.bpi &&
