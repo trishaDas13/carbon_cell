@@ -16,6 +16,10 @@ header {
       background: linear-gradient(to right, #D0D92E, #89E791); 
       -webkit-text-fill-color: transparent; 
       -webkit-background-clip: text; 
+      display: none;
+      @media (max-width: 1023px){
+        display: inline;
+      }
     }
     .intro {
       .first {

@@ -3,7 +3,7 @@ import React, { createContext, useState, useContext } from "react";
 export const BooleanContext = createContext();
 
 const BooleanContextProvider = ({ children }) => {
-  const [isShow, setIsShow] = useState(true);
+  const [isShow, setIsShow] = useState(false);
 
   return (
     <BooleanContext.Provider value={{ isShow, setIsShow }}>
