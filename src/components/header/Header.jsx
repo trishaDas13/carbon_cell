@@ -41,7 +41,7 @@ const Header = () => {
               <input
                 type="text"
                 onKeyDown={handleKeyDown}
-                placeholder="Type your name and press Enter"
+                placeholder="Type your name & press Enter"
               />
             )}
           </p>

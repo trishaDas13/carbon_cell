@@ -50,7 +50,7 @@ const MetaMask = () => {
           {defaultAccount ? "Connected!" : "Connect Wallet!"}
         </button>
         {errorMessage ? (
-          <p className="error">Please Install and create an account in Metamask !!! </p>
+          <p className="error">Please Install and create an account in Metamask </p>
         ) : (
           <div className="metaInfo">
             {defaultAccount && (
