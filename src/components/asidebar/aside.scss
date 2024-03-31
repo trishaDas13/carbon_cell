@@ -1,4 +1,4 @@
-aside {
+.show {
   background-color: rgb(26, 30, 28);
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -51,3 +51,6 @@ aside {
     }
   }
 }
+ .active{
+    background: rgba(42, 180, 42, 0.616);
+  };
