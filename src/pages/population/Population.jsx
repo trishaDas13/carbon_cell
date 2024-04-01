@@ -8,7 +8,7 @@ const Population = () => {
   return (
     <main>
       <Header/>
-      <section className="chart_body">
+      <section className="chart_body animate__animated animate__fadeInRight">
         <Chart/>
       </section>
       

@@ -32,7 +32,7 @@ const Card = () => {
   }, []);
 
   return (
-    <section className="bitcoin">
+    <section className="bitcoin animate__animated animate__fadeInRight">
       <div className="header">
         <h1>{data?.chartName}</h1>
         <p>Disclaimer: {data?.disclaimer}</p>

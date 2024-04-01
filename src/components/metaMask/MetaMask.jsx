@@ -39,7 +39,7 @@ const MetaMask = () => {
 
   return (
     <main>
-      <div className="metaBox">
+      <div className="metaBox animate__animated animate__fadeInRight">
         <h1>
           Connect with <span>MetaMask!</span>
         </h1>

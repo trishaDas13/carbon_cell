@@ -8,13 +8,13 @@ const Home = () => {
   return (
     <main>
       <Header />
-      <section className="home_main">
+      <section className="home_main animate__animated animate__fadeInRight">
         <h2>Population Growth of U.S.</h2>
         <div className="population">
           <Chart/> 
         </div>
       </section>
-      <section className="home_main">
+      <section className="home_main animate__animated animate__fadeInRight">
         <h2>Cryptocurrency Prices</h2>
         <div className="population">
           <Card/> 
