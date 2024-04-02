@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import './card.scss';
+import "./card.scss";
+import { useLocation } from "react-router-dom";
 
 const Card = () => {
   const [data, setData] = useState([]);
+  const location = useLocation();
   //todo: Get data from API
   const fetchData = async () => {
     try {
@@ -18,14 +20,13 @@ const Card = () => {
 
   //todo: genarate a random color
   const getRandomColor = () => {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
+    const letters = "0123456789ABCDEF";
+    let color = "#";
     for (let i = 0; i < 6; i++) {
       color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
   };
-
 
   useEffect(() => {
     fetchData();
@@ -34,31 +35,48 @@ const Card = () => {
   return (
     <section className="bitcoin animate__animated animate__fadeInRight">
       <div className="header">
-        <h1>{data?.chartName}</h1>
-        <p>Disclaimer: {data?.disclaimer}</p>
+        {location.pathname !== "/" && <h1>{data?.chartName}</h1>}
+
+        {location.pathname !== "/" && <p>Disclaimer: {data?.disclaimer}</p>}
       </div>
       <div className="cardsect">
-      {data?.bpi &&
-        Object.entries(data?.bpi).map((item, i) => {
-          let value = item[1];
-          let randomColor = getRandomColor();
-          return (
-            <div className="cards" key={i}>
-              <div className="top">
-                <div className="color"
-                style={{backgroundColor: randomColor}}></div>
-                <h3>{value.code}</h3>
+        {data?.bpi &&
+          Object.entries(data?.bpi).map((item, i) => {
+            let value = item[1];
+            let randomColor = getRandomColor();
+            return (
+              <div className="cards" key={i}>
+                <div className="top">
+                  <div
+                    className="color"
+                    style={{ backgroundColor: randomColor }}
+                  ></div>
+                  <h3>{value.code}</h3>
+                </div>
+                <p className="desc">{value.description}</p>
+                <div className="currencies">
+                  <h4 className="rate" style={{ backgroundColor: randomColor }}>
+                    {value.rate_float.toLocaleString("en-US", {
+                      style: "currency",
+                      currency: "INR",
+                    })}
+                  </h4>
+                  <h4 className="rate" style={{ backgroundColor: randomColor }}>
+                    {(value.rate_float * 0.012).toLocaleString("en-US", {
+                      style: "currency",
+                      currency: "USD",
+                    })}
+                  </h4>
+                  <h4 className="rate" style={{ backgroundColor: randomColor }}>
+                    {(value.rate_float * 0.011).toLocaleString("en-US", {
+                      style: "currency",
+                      currency: "EUR",
+                    })}
+                  </h4>
+                </div>
               </div>
-              <p className="desc">{value.description}</p>
-              <div className="currencies">
-              <h4 className="rate"  style={{backgroundColor: randomColor}}>{value.rate_float.toLocaleString("en-US", { style: 'currency', currency: 'INR' })}</h4>
-                <h4 className="rate"  style={{backgroundColor: randomColor}}>{((value.rate_float)*0.012).toLocaleString("en-US", { style: 'currency', currency: 'USD' })}</h4>
-                <h4 className="rate"  style={{backgroundColor: randomColor}}>{((value.rate_float)*0.011).toLocaleString("en-US", { style: 'currency', currency: 'EUR' })}</h4>
-              </div>
-              
-            </div>
-          );
-        })}
+            );
+          })}
       </div>
     </section>
   );

@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 40px;
     padding: 1rem;
     max-width: 1500px;
     .header{
@@ -17,6 +17,7 @@
         flex-wrap: wrap;
         justify-content: center;;
         gap: 25px;
+        cursor: pointer;
         .cards{
             display: flex;
             flex-direction: column;
@@ -26,6 +27,12 @@
             border-radius: 15px;
             max-width: 320px;
             width: 100%;
+            position: relative;
+            transition: 0.5s ease-in-out;
+            &:hover{
+                box-shadow: 0 0 20px rgb(42,176,42);
+                transition: 0.5s ease-in-out;
+            }
             .desc{
                 opacity: 0.6;
             }
@@ -37,6 +44,11 @@
                     width: 50px;
                     height: 50px;
                     border-radius: 50%;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                    }
                 }
             }
             .currencies{
@@ -48,6 +60,28 @@
                     border-radius: 15px;
                 }
             }
+            .coinrankingUrl{
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                color: rgba(255, 255, 255, 0.363);
+
+            }
+        }
+    }
+    .showCard{
+        all: unset;
+        background-color: rgb(42,176,42);
+        width: 400px;
+        padding: 0.7rem 1rem;
+        text-align: center;
+        font-weight: 600;
+        text-shadow: 0 0 5px black;
+        border-radius: 8px;
+        margin: auto;
+        cursor: pointer;
+        &:hover{
+            background-color: rgba(42,176,42, 0.8);
         }
     }
 }

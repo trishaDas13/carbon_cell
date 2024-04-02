@@ -1,0 +1,90 @@
+.follow {
+  background-color: rgb(23, 23, 23);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+  max-width: 350px;
+  width: 100%;
+  @media (max-width: 1023px){
+    max-width: 600px;
+  }
+  .follow_head {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  hr {
+    width: 100%;
+    opacity: 0.5;
+  }
+  .post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: black;
+    border-radius: 15px;
+    padding: 1rem;
+    width: 100%;
+    .post_info {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+      .co_info {
+        h4 {
+          font-weight: 500;
+          span {
+            opacity: 0.3;
+          }
+        }
+        p {
+          font-size: 13px;
+        }
+      }
+    }
+    .post_feed {
+      p {
+        font-size: 14px;
+        width: 100%;
+        a {
+          color: white;
+          @media (max-width: 427px){
+            display: none;
+          }
+        }
+        
+      }
+    }
+    .icon_group {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      opacity: 0.5;
+      flex-wrap: wrap;
+      .post_icon {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  }
+  #followbtn {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    background-color: rgb(42,172,42);
+    padding: 8px 16px;
+    border-radius: 8px;
+    &:hover{
+        background-color: rgba(42,172,42,.7);
+    }
+  }
+}
